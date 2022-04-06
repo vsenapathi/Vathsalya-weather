@@ -5,10 +5,116 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The Weather App</title>
+    <script
+      src="https://kit.fontawesome.com/c03527c465.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="src/style.css" />
   </head>
   <body>
-    <h1>Weather App</h1>
+    <div class="wrapper">
+      <header>
+        <div class="logo">
+          <div class="triangle"></div>
+          <svg class="logo-text">
+            <text class="large">W</text>
+            <text class="small">e</text>
+            <text class="medium">a</text>
+            <text class="large">t</text>
+            <text class="small">h</text>
+            <text class="medium">e</text>
+            <text class="large">r</text>
+          </svg>
+        </div>
+        <div class="menu">
+          <div class="search">
+            <input
+              type="search"
+              class="search-box"
+              id="search-box"
+              placeholder="Enter A City"
+            />
+            <button type="submit">
+              <img
+                src="src/images/search-icon-dark.png"
+                alt="search button"
+                width="50px"
+              />
+            </button>
+          </div>
+
+          <div class="tempUnits">
+            <input type="checkbox" class="checkbox" id="checkbox" />
+            <label for="checkbox" class="label">
+              <span class="celsius">℃</span>
+              <span class="fahr">℉</span>
+              <div class="ball"></div>
+            </label>
+          </div>
+
+          <div class="geolocation">
+            <img
+              src="src/images/location-icon-dark.png"
+              alt="current location"
+              class="current-location"
+              width="50px"
+            />
+          </div>
+        </div>
+      </header>
+
+      <section class="hero">
+        <div class="date-time">
+          <span class="date">Wed Apr 6</span>
+          <span class="time">3:51 PM</span>
+        </div>
+
+        <div class="descriptor">
+          <span class="condition-description">Sunny</span>
+          in
+          <span class="city-name">Dallas</span>
+        </div>
+
+        <div class="condition-icon">
+          <img
+            src="src/images/condition icons/01d.png"
+            alt="Sunny"
+            width="300px"
+          />
+        </div>
+      </section>
+
+      <section class="forecast">
+        <span class="windspeed">
+          <i class="fa-solid fa-wind"></i>
+          <div class="windspeedValue">4 mph</div>
+        </span>
+
+        <span class="minus1hr">
+          <div class="forecastTempMinus1">15°</div>
+          <div class="forecastTimeMinus1">3 PM</div>
+        </span>
+
+        <span class="current">
+          <div class="currentTemp">16°</div>
+          <div class="currentTime">4 PM</div>
+        </span>
+
+        <span class="plus1hr">
+          <div class="forecastTempPlus1">17°</div>
+          <div class="forecastTimePlus1">5 PM</div>
+        </span>
+
+        <span class="humidity">
+          <i class="fa-solid fa-droplet"></i>
+          <div class="humidityValue">23%</div>
+        </span>
+      </section>
+    </div>
+    <footer>
+      <a href="#">Open Source Code</a>, by Vathsalya Senapathi, hosted on
+      Netlify
+    </footer>
     <script src="src/hello.js"></script>
   </body>
 </html>
