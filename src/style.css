@@ -191,7 +191,7 @@ button.submit:hover {
   position: absolute;
   width: 300px;
   text-align: center;
-  bottom: 250px;
+  bottom: 230px;
   right: 60px;
   color: #1d1d1d;
   border: 4px solid #1d1d1d;
@@ -211,14 +211,15 @@ button.submit:hover {
 .hero {
   margin: 0 auto;
   text-align: center;
-  position: relative;
-  bottom: 200px;
 }
 
 .date-time {
   font-family: "Evergreen", sans-serif;
   font-size: 18px;
   letter-spacing: 3px;
+  position: absolute;
+  top: 10px;
+  left: 740px;
 }
 
 .descriptor {
@@ -226,11 +227,15 @@ button.submit:hover {
   font-size: 150px;
   text-transform: capitalize;
   z-index: 20;
+  text-decoration: underline;
+  text-decoration-color: #1d1d1d;
+  text-decoration-thickness: 10px;
 }
 .condition-icon {
   z-index: -5;
   position: absolute;
-  top: -100px;
+  top: 10px;
+  left: 700px;
 }
 
 .forecast {
@@ -295,6 +300,9 @@ button.submit:hover {
 .subtitle {
   font-family: "Evergreen", sans-serif;
   font-size: 16px;
+  background: #1d1d1d;
+  padding: 10px 15px 5px 15px;
+  border-radius: 50px;
 }
 
 .windspeed {

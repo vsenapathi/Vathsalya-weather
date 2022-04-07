@@ -10,6 +10,7 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="src/style.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   </head>
   <body>
     <div class="wrapper">
@@ -18,16 +19,16 @@
           <div class="triangle"></div>
           <svg height="100" width="160" class="logo-text">
             <text x="0" y="50" class="large">W</text>
-            <text x="25" y="40" class="small">e</text>
-            <text x="35" y="47" class="medium">a</text>
-            <text x="44" y="50" class="large">t</text>
-            <text x="55" y="35" class="small">h</text>
-            <text x="65" y="45" class="medium">e</text>
-            <text x="75" y="50" class="large">r</text>
+            <text x="31" y="40" class="small">e</text>
+            <text x="43" y="47" class="medium">a</text>
+            <text x="53" y="50" class="large">t</text>
+            <text x="66" y="35" class="small">h</text>
+            <text x="78" y="45" class="medium">e</text>
+            <text x="92" y="50" class="large">r</text>
           </svg>
         </div>
         <div class="menu">
-          <div class="search">
+          <form class="search">
             <input
               type="search"
               class="search-box"
@@ -41,7 +42,7 @@
                 width="75px"
               />
             </button>
-          </div>
+          </form>
 
           <div class="tempUnits">
             <input type="checkbox" class="checkbox" id="checkbox" />
@@ -60,6 +61,21 @@
               width="75px"
             />
           </div>
+
+          <a
+            href="https://github.com/vsenapathi?tab=repositories"
+            class="profile"
+          >
+            <img
+              src="src/images/Profile icon dark.png"
+              class="profile-icon"
+              alt="coder profile"
+              width="75px"
+            />
+            <span class="hover-text"
+              >Open-source coded by Vathsalya Senapathi, hosted on Netlify</span
+            >
+          </a>
         </div>
       </header>
 
@@ -70,51 +86,57 @@
         </div>
 
         <div class="descriptor">
-          <span class="condition-description">Sunny</span>
-          in
-          <span class="city-name">Dallas</span>
+          <span class="condition-description">Search</span>
+          <span class="titleEdit">A</span>
+          <span class="city-name">City</span>
         </div>
 
         <div class="condition-icon">
           <img
+            class="condition-img"
             src="src/images/condition icons/01d.png"
             alt="Sunny"
             width="300px"
           />
         </div>
       </section>
+      <span class="windspeed headline">
+        <span class="windspeedValue subtitle">Wind Speed</span>
+        <i class="fa-solid fa-wind"></i>
+      </span>
 
       <section class="forecast">
-        <span class="windspeed">
-          <i class="fa-solid fa-wind"></i>
-          <div class="windspeedValue">4 mph</div>
+        <span class="minus2hr">
+          <div class="forecastTempMinus2 headline">14°</div>
+          <div class="forecastTimeMinus2 subtitle">2 PM</div>
         </span>
 
         <span class="minus1hr">
-          <div class="forecastTempMinus1">15°</div>
-          <div class="forecastTimeMinus1">3 PM</div>
+          <div class="forecastTempMinus1 headline">15°</div>
+          <div class="forecastTimeMinus1 subtitle">3 PM</div>
         </span>
 
         <span class="current">
-          <div class="currentTemp">16°</div>
-          <div class="currentTime">4 PM</div>
+          <div class="currentTemp headline">16°</div>
+          <div class="currentTime subtitle">Now</div>
         </span>
 
         <span class="plus1hr">
-          <div class="forecastTempPlus1">17°</div>
-          <div class="forecastTimePlus1">5 PM</div>
+          <div class="forecastTempPlus1 headline">17°</div>
+          <div class="forecastTimePlus1 subtitle">5 PM</div>
         </span>
 
-        <span class="humidity">
-          <i class="fa-solid fa-droplet"></i>
-          <div class="humidityValue">23%</div>
+        <span class="plus2hr">
+          <div class="forecastTempPlus2 headline">18°</div>
+          <div class="forecastTimePlus2 subtitle">6 PM</div>
         </span>
       </section>
+      <span class="humidity headline">
+        <i class="fa-solid fa-droplet"></i>
+        <span class="humidityValue subtitle">Humidity</span>
+      </span>
     </div>
-    <footer>
-      <a href="#">Open Source Code</a>, by Vathsalya Senapathi, hosted on
-      Netlify
-    </footer>
+
     <script src="src/hello.js"></script>
   </body>
 </html>
