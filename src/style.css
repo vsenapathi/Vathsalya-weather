@@ -10,7 +10,6 @@
 }
 
 * {
-  margin: 0;
   box-sizing: border-box;
 }
 
@@ -26,7 +25,12 @@ body {
 
 .wrapper {
   width: 90%;
+  margin: 60px auto;
   border: 5px solid #1d1d1d;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
 }
 
 header {
@@ -37,15 +41,15 @@ header {
 .triangle {
   width: 0;
   height: 0;
-  border-top: 180px solid #1d1d1d;
-  border-right: 180px solid transparent;
+  border-top: 250px solid #1d1d1d;
+  border-right: 250px solid transparent;
 }
 
 svg.logo-text {
   z-index: 20;
   position: absolute;
-  top: 90px;
-  left: 110px;
+  top: 40px;
+  left: 30px;
 }
 
 svg.logo-text text {
@@ -54,21 +58,15 @@ svg.logo-text text {
 }
 
 text.large {
-  font-size: 50px;
+  font-size: 60px;
 }
 
 text.medium {
-  font-size: 36px;
+  font-size: 42px;
 }
 
 text.small {
-  font-size: 30px;
-}
-
-footer {
-  position: absolute;
-  bottom: 10px;
-  margin: 0 auto;
+  font-size: 38px;
 }
 
 .search {
@@ -175,4 +173,144 @@ button.submit:hover {
 .geolocation:hover {
   cursor: pointer;
   filter: invert(100%);
+}
+
+.profile-icon {
+  position: relative;
+  top: 80px;
+  left: 160px;
+  transition: all 200ms linear;
+  cursor: pointer;
+}
+
+.profile-icon:hover {
+  filter: invert(100%);
+}
+
+.hover-text {
+  position: absolute;
+  width: 300px;
+  text-align: center;
+  bottom: 250px;
+  right: 60px;
+  color: #1d1d1d;
+  border: 4px solid #1d1d1d;
+  background: #f1f0eb;
+  padding: 10px 15px;
+  border-radius: 50px;
+  font-family: "Voga", serif;
+  font-size: 24px;
+  display: none;
+  transition: all 400ms linear;
+}
+
+.profile-icon:hover + .hover-text {
+  display: inline;
+}
+
+.hero {
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  bottom: 200px;
+}
+
+.date-time {
+  font-family: "Evergreen", sans-serif;
+  font-size: 18px;
+  letter-spacing: 3px;
+}
+
+.descriptor {
+  font-family: "Voga", serif;
+  font-size: 150px;
+  text-transform: capitalize;
+  z-index: 20;
+}
+.condition-icon {
+  z-index: -5;
+  position: absolute;
+  top: -100px;
+}
+
+.forecast {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 50%;
+  text-align: center;
+  margin: 0 auto;
+  padding-top: 70px;
+  padding-bottom: 10px;
+}
+
+.current {
+  position: relative;
+  bottom: 80px;
+}
+
+.plus1hr,
+.minus1hr {
+  position: relative;
+  bottom: 60px;
+}
+
+.plus2hr,
+.minus2hr {
+  position: relative;
+  bottom: 45px;
+}
+
+.currentTemp {
+  font-size: 100px;
+  font-family: "Voga", serif;
+}
+
+.currentTime,
+.forecastTimeMinus1,
+.forecastTimePlus1,
+.forecastTimeMinus2,
+.forecastTimePlus2 {
+  position: relative;
+  right: 10px;
+}
+
+.forecastTempMinus1,
+.forecastTempPlus1 {
+  font-family: "Voga", serif;
+  font-size: 75px;
+}
+
+.forecastTempMinus2,
+.forecastTempPlus2 {
+  font-family: "Voga", serif;
+  font-size: 55px;
+}
+
+.fa-droplet,
+.fa-wind {
+  font-size: 30px;
+}
+
+.subtitle {
+  font-family: "Evergreen", sans-serif;
+  font-size: 16px;
+}
+
+.windspeed {
+  position: absolute;
+  background: #1d1d1d;
+  padding: 10px 10px 10px 150px;
+  border-radius: 0px 50px 50px 0px;
+  top: 500px;
+  left: 0px;
+}
+
+.humidity {
+  position: absolute;
+  background: #1d1d1d;
+  padding: 10px 150px 10px 10px;
+  border-radius: 50px 0px 0px 50px;
+  top: 500px;
+  right: 0px;
 }
