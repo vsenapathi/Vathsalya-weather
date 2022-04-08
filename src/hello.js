@@ -118,7 +118,7 @@ function setLocation(response) {
 }
 
 function goLocate(city) {
-  let coordApiUrl = `http://api.openweathermap.org/geo/1.0/direct?q=${city}&appid=${apiKey}`;
+  let coordApiUrl = `https://api.openweathermap.org/geo/1.0/direct?q=${city}&appid=${apiKey}`;
 
   axios.get(coordApiUrl).then(setLocation);
 }
