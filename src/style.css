@@ -21,6 +21,7 @@ body {
   align-items: center;
   background-image: url(./images/dark_blue_bg.png);
   color: #f1f0eb;
+  transition: background-image 400ms ease-in-out;
 }
 
 .wrapper {

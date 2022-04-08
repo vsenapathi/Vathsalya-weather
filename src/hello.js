@@ -21,8 +21,10 @@ function formatDateTime(epoch, timezone) {
     hour: "numeric",
   });
 
-  if ((timeCondition = "03")) {
-    document.body.style.backgroundImage = "url('./images/light-gray-bg.png')";
+  let bgCondition = parseInt(timeCondition);
+
+  if (bgCondition >= 6 && bgCondition <= 18) {
+    document.body.style.backgroundImage = "url('src/images/light-gray-bg.png')";
     document.body.style.color = "#1d1d1d";
   }
 
@@ -63,6 +65,7 @@ function formatDateTime(epoch, timezone) {
 }
 
 function formatDisplay(response) {
+  console.log(response.data);
   let currentTemp = document.querySelector(".currentTemp");
   currentTemp.innerHTML = `${Math.round(response.data.current.temp)}°`;
 
