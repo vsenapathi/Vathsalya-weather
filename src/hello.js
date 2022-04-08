@@ -22,14 +22,21 @@ function formatDateTime(epoch, timezone) {
   });
 
   let bgCondition = parseInt(timeCondition);
+  console.log(bgCondition);
 
   if (bgCondition >= 6 && bgCondition <= 18) {
     document.body.style.backgroundImage = "url('src/images/light-gray-bg.png')";
     document.body.style.color = "#1d1d1d";
+  } else {
+    document.body.style.backgroundImage = "url('src/images/dark_blue_bg.png')";
+    document.body.style.color = "#f1f0eb";
   }
 
   let dtHeader = document.querySelector(".date-time");
   dtHeader.innerHTML = localDt;
+
+  let currentTime = document.querySelector(".currentTime");
+  currentTime.innerHTML = "Now";
 
   let plus1hr = timePlus1.toLocaleString("en-US", {
     timeZone: `${timezone}`,
@@ -65,7 +72,6 @@ function formatDateTime(epoch, timezone) {
 }
 
 function formatDisplay(response) {
-  console.log(response.data);
   let currentTemp = document.querySelector(".currentTemp");
   currentTemp.innerHTML = `${Math.round(response.data.current.temp)}°`;
 
@@ -222,5 +228,3 @@ let unitToggle = document.querySelector(".checkbox");
 unitToggle.addEventListener("change", convertUnit);
 
 let apiKey = "389591576a5c2ac7834f2735d7f36205";
-
-goLocate("London");

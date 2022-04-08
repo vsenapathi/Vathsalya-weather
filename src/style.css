@@ -21,7 +21,7 @@ body {
   align-items: center;
   background-image: url(./images/dark_blue_bg.png);
   color: #f1f0eb;
-  transition: background-image 400ms ease-in-out;
+  transition: all 400ms ease-in-out;
 }
 
 .wrapper {
@@ -224,6 +224,7 @@ button.submit:hover {
   position: absolute;
   top: 10px;
   left: 740px;
+  transition: all 400ms ease-in-out;
 }
 
 .descriptor {
@@ -234,12 +235,14 @@ button.submit:hover {
   text-decoration: underline;
   text-decoration-color: #1d1d1d;
   text-decoration-thickness: 10px;
+  transition: all 400ms ease-in-out;
 }
 .condition-icon {
   z-index: -5;
   position: absolute;
   top: 10px;
   left: 700px;
+  transition: all 400ms ease-in-out;
 }
 
 .forecast {
@@ -251,11 +254,13 @@ button.submit:hover {
   margin: 0 auto;
   padding-top: 70px;
   padding-bottom: 50px;
+  transition: all 400ms ease-in-out;
 }
 
 .headline {
   font-family: "Voga", serif;
   font-size: 75px;
+  transition: all 400ms ease-in-out;
 }
 
 .fa-droplet,
@@ -271,6 +276,7 @@ button.submit:hover {
   color: #f1f0eb;
   padding: 10px 15px 5px 15px;
   border-radius: 50px;
+  transition: all 400ms ease-in-out;
 }
 
 .windspeed {
@@ -281,6 +287,7 @@ button.submit:hover {
   border-radius: 0px 50px 50px 0px;
   top: 500px;
   left: 0px;
+  transition: all 400ms ease-in-out;
 }
 
 .humidity {
@@ -291,6 +298,7 @@ button.submit:hover {
   border-radius: 50px 0px 0px 50px;
   top: 500px;
   right: 0px;
+  transition: all 400ms ease-in-out;
 }
 
 @media (max-width: 1440px) {
@@ -314,5 +322,23 @@ button.submit:hover {
 
   .headline {
     font-size: 60px;
+  }
+}
+
+@media (max-height: 100vh) {
+  .hover-text {
+    width: 150px;
+    bottom: 150px;
+    right: 130px;
+  }
+
+  .humidity {
+    top: 430px;
+    padding: 10px 100px 10px 10px;
+  }
+
+  .windspeed {
+    top: 430px;
+    padding: 10px 10px 10px 100px;
   }
 }
