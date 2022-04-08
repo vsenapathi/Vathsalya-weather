@@ -19,7 +19,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url(./images/dark_blue_bg.png);
+  background-image: url(./images/dark_blue_bg.png);
   color: #f1f0eb;
 }
 
@@ -80,6 +80,9 @@ text.small {
 .search-box {
   background: #f1f0eb;
   border: 4px solid #1d1d1d;
+  color: #1d1d1d;
+  font-family: "Voga", serif;
+  font-size: 24px;
   border-radius: 50px;
   height: 50px;
   padding: 15px 18px;
@@ -246,61 +249,26 @@ button.submit:hover {
   text-align: center;
   margin: 0 auto;
   padding-top: 70px;
-  padding-bottom: 10px;
+  padding-bottom: 50px;
 }
 
-.current {
-  position: relative;
-  bottom: 80px;
-}
-
-.plus1hr,
-.minus1hr {
-  position: relative;
-  bottom: 60px;
-}
-
-.plus2hr,
-.minus2hr {
-  position: relative;
-  bottom: 45px;
-}
-
-.currentTemp {
-  font-size: 100px;
+.headline {
   font-family: "Voga", serif;
-}
-
-.currentTime,
-.forecastTimeMinus1,
-.forecastTimePlus1,
-.forecastTimeMinus2,
-.forecastTimePlus2 {
-  position: relative;
-  right: 10px;
-}
-
-.forecastTempMinus1,
-.forecastTempPlus1 {
-  font-family: "Voga", serif;
+  color: #f1f0eb;
   font-size: 75px;
-}
-
-.forecastTempMinus2,
-.forecastTempPlus2 {
-  font-family: "Voga", serif;
-  font-size: 55px;
 }
 
 .fa-droplet,
 .fa-wind {
   font-size: 30px;
+  color: #f1f0eb;
 }
 
 .subtitle {
   font-family: "Evergreen", sans-serif;
   font-size: 16px;
   background: #1d1d1d;
+  color: #f1f0eb;
   padding: 10px 15px 5px 15px;
   border-radius: 50px;
 }
@@ -308,6 +276,7 @@ button.submit:hover {
 .windspeed {
   position: absolute;
   background: #1d1d1d;
+  color: #f1f0eb;
   padding: 10px 10px 10px 150px;
   border-radius: 0px 50px 50px 0px;
   top: 500px;
@@ -317,6 +286,7 @@ button.submit:hover {
 .humidity {
   position: absolute;
   background: #1d1d1d;
+  color: #f1f0eb;
   padding: 10px 150px 10px 10px;
   border-radius: 50px 0px 0px 50px;
   top: 500px;
