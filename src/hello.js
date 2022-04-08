@@ -16,6 +16,16 @@ function formatDateTime(epoch, timezone) {
   };
   let localDt = myDate.toLocaleString("en-US", options);
 
+  let timeCondition = myDate.toLocaleTimeString("en-GB", {
+    timeZone: `${timezone}`,
+    hour: "numeric",
+  });
+
+  if ((timeCondition = "03")) {
+    document.body.style.backgroundImage = "url('./images/light-gray-bg.png')";
+    document.body.style.color = "#1d1d1d";
+  }
+
   let dtHeader = document.querySelector(".date-time");
   dtHeader.innerHTML = localDt;
 
