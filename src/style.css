@@ -302,6 +302,10 @@ button.submit:hover {
 }
 
 @media (max-width: 1440px) {
+  body {
+    overflow: hidden;
+  }
+
   .descriptor {
     font-size: 100px;
   }
@@ -311,34 +315,26 @@ button.submit:hover {
   }
 
   .hover-text {
-    width: 150px;
-    bottom: 160px;
+    width: 100px;
+    bottom: 175px;
+    right: 130px;
     font-size: 18px;
   }
 
+  .humidity {
+    top: 450px;
+    padding: 10px 100px 10px 10px;
+  }
+
+  .windspeed {
+    top: 450px;
+    padding: 10px 10px 10px 100px;
+  }
   .date-time {
     left: 550px;
   }
 
   .headline {
     font-size: 60px;
-  }
-}
-
-@media (max-height: 100vh) {
-  .hover-text {
-    width: 150px;
-    bottom: 150px;
-    right: 130px;
-  }
-
-  .humidity {
-    top: 430px;
-    padding: 10px 100px 10px 10px;
-  }
-
-  .windspeed {
-    top: 430px;
-    padding: 10px 10px 10px 100px;
   }
 }
