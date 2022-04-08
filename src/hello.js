@@ -81,9 +81,9 @@ function formatDisplay(response) {
   );
 
   let windSpeed = document.querySelector(".windspeedValue");
-  windSpeed.innerHTML = `${Math.round(
-    2.237 * response.data.current.wind_speed
-  )} mph`;
+  windSpeed.innerHTML = `${Math.round(response.data.current.wind_speed)} m/s`;
+
+  wind = response.data.current.wind_speed;
 
   let humidity = document.querySelector(".humidityValue");
   humidity.innerHTML = `${Math.round(response.data.current.humidity)}%`;
@@ -145,6 +145,10 @@ function handleSubmit(event) {
 function convertUnit(event) {
   event.preventDefault();
   if (unitToggle.checked) {
+    let windSpeed = Math.round(2.237 * wind);
+    let windspeedValue = document.querySelector(".windspeedValue");
+    windspeedValue.innerHTML = `${windSpeed} mph`;
+
     let fahrCurrentTemp = Math.round((celCurrentTemp * 9) / 5 + 32);
     let currentTempValue = document.querySelector(".currentTemp");
     currentTempValue.innerHTML = `${fahrCurrentTemp}°`;
@@ -187,6 +191,7 @@ celTempPlus1hr = null;
 celTempPlus2hr = null;
 celTempPlus3hr = null;
 celTempPlus4hr = null;
+wind = null;
 
 let searchForm = document.querySelector(".search");
 searchForm.addEventListener("submit", handleSubmit);
