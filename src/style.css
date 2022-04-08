@@ -292,3 +292,27 @@ button.submit:hover {
   top: 500px;
   right: 0px;
 }
+
+@media (max-width: 1440px) {
+  .descriptor {
+    font-size: 100px;
+  }
+
+  .condition-icon {
+    left: 500px;
+  }
+
+  .hover-text {
+    width: 150px;
+    bottom: 160px;
+    font-size: 18px;
+  }
+
+  .date-time {
+    left: 550px;
+  }
+
+  .headline {
+    font-size: 60px;
+  }
+}
