@@ -184,7 +184,7 @@ function handlePosition(position) {
 
   getForecast(lat, lon);
 
-  let reverseGeocodeApi = `http://api.openweathermap.org/geo/1.0/reverse?lat=${lat}&lon=${lon}&appid=${apiKey}`;
+  let reverseGeocodeApi = `https://api.openweathermap.org/geo/1.0/reverse?lat=${lat}&lon=${lon}&appid=${apiKey}`;
 
   axios.get(reverseGeocodeApi).then(function (response) {
     let cityName = document.querySelector(".city-name");
