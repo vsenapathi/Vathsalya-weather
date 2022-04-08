@@ -146,6 +146,9 @@ function handleSubmit(event) {
   event.preventDefault();
   let cityInput = document.querySelector(".search-box");
   goLocate(cityInput.value);
+
+  let checkbox = document.querySelector(".checkbox");
+  checkbox.checked = false;
 }
 
 function convertUnit(event) {
@@ -175,6 +178,9 @@ function convertUnit(event) {
     let tempPlus4hr = document.querySelector(".forecastTempPlus4");
     tempPlus4hr.innerHTML = `${fahrTempPlus4hr}°`;
   } else {
+    let windspeedValue = document.querySelector(".windspeedValue");
+    windspeedValue.innerHTML = `${Math.round(wind)} m/s`;
+
     let currentTempValue = document.querySelector(".currentTemp");
     currentTempValue.innerHTML = `${Math.round(celCurrentTemp)}°`;
 
